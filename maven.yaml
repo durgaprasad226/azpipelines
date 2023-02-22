@@ -1,0 +1,11 @@
+---
+pool: 'azure pipelines'
+trigger: 
+  - main
+steps:
+  - task: Maven@3
+    inputs:
+      mavenPOMFile: 'pom.xml'
+      goals: 'package'
+      testResultsFiles: '**/surefire-reports/TEST-*.xml'
+      javaHomeOption: '1.17'
