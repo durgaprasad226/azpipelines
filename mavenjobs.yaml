@@ -12,7 +12,7 @@ jobs:
     steps:
       - task: Maven@3
         inputs:
-          mavenPOMFile: 'D:\Java/pom.xml'
+          mavenPOMFile: 'pom.xml'
           goals: 'package'
           publishJUnitResults: true
           javaVersionOption: '1.17'
