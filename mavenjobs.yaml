@@ -12,6 +12,7 @@ jobs:
     steps:
       - task: Maven@3
         inputs:
+          mavenPOMFile: 'pom.xml'
           goals: 'package'
           publishJUnitResults: true
           testResultsFiles: '**/surefire-reports/TEST-*.xml'
